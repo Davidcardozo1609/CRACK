@@ -1,6 +1,12 @@
-santi barrio negro 
-hoy no vino
-y cago todas las pantallas del sistema de escritorio
-y nose para que puso las flechitas de la derecha
-el profe nos cago a pedo
-
+create datebase inner_join;
+use inner_join;
+create table empleados(
+  id_empleados int auto_increment primary key,
+apellido varchar(50) not null,
+nombre varchar(50) not null);
+create table puestos(
+  id_puestos int auto_increment primary key,
+id_empleados int not null,
+sector varchar(30) not null,
+foreign key (id_empleados) references empleados(id_empleados)
+);
